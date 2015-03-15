@@ -6,7 +6,7 @@ keep_md: true
 
 ## Loading and preprocessing the data. 
 
-1. Load the data.
+1. Load the data.  
 opts_chunk$set(echo=TRUE, results='asis')
 
 ```r
