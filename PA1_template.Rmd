@@ -87,7 +87,6 @@ table(wd)
 2. Make a panel plot containing a time series plot (i.e. type = "l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis). 
 ```{r}
 library(ggplot2)
-library(scales)
 meanimp<-tapply(impdata$steps,interaction(impdata$interval,wd),mean,na.rm=TRUE)
 daydf<-data.frame(meanimp,
                   intimp=unique(impdata$interval),

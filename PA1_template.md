@@ -143,7 +143,6 @@ table(wd)
 
 ```r
 library(ggplot2)
-library(scales)
 meanimp<-tapply(impdata$steps,interaction(impdata$interval,wd),mean,na.rm=TRUE)
 daydf<-data.frame(meanimp,
                   intimp=unique(impdata$interval),
