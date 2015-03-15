@@ -7,8 +7,7 @@ keep_md: true
 ## Loading and preprocessing the data. 
 
 1. Load the data.  
-opts_chunk$set(echo=TRUE, results='asis')
-```{r}
+```{r setoptions, echo=TRUE, results='asis'}
 url <- "http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
 download.file(url, "./activity.zip", mode="wb")
 unzip("./activity.zip")

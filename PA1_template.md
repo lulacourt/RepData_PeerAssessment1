@@ -7,7 +7,6 @@ keep_md: true
 ## Loading and preprocessing the data. 
 
 1. Load the data.  
-opts_chunk$set(echo=TRUE, results='asis')
 
 ```r
 url <- "http://d396qusza40orc.cloudfront.net/repdata%2Fdata%2Factivity.zip"
@@ -32,7 +31,7 @@ total<-tapply(data$steps,data$date,sum,na.rm=TRUE)
 hist(total,main="Total number of steps taken each day")
 ```
 
-![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
 
 2. Calculate and report the mean and median of the total number of steps taken per day.
 
@@ -62,7 +61,7 @@ int<-strptime(sprintf("%04d",as.numeric(names(mean))),format="%H%M")
 plot(int,mean,type="l",xlab="5-minute intervals",ylab="Average number of steps taken",main="Average daily activity")
 ```
 
-![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5-1.png) 
+![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4-1.png) 
 
 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -103,7 +102,7 @@ imptotal<-tapply(impdata$steps,impdata$date,sum,na.rm=TRUE)
 hist(imptotal,main="Total number of steps taken each day (imputed NA's)")
 ```
 
-![plot of chunk unnamed-chunk-9](figure/unnamed-chunk-9-1.png) 
+![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
 
 ```r
 mean(imptotal)
@@ -152,4 +151,4 @@ ggplot(daydf,aes(intimp,meanimp))+geom_line()+xlab("5-minute intervals") +
     facet_grid(dayimp~.)
 ```
 
-![plot of chunk unnamed-chunk-11](figure/unnamed-chunk-11-1.png) 
+![plot of chunk unnamed-chunk-10](figure/unnamed-chunk-10-1.png) 
