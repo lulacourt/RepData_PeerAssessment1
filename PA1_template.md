@@ -28,7 +28,7 @@ data$date<-ymd(data$date)
 
 ```r
 total<-tapply(data$steps,data$date,sum,na.rm=TRUE)
-hist(total,main="Total number of steps taken each day")
+hist(total,main="Total number of steps taken each day",xlab="")
 ```
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2-1.png) 
@@ -99,7 +99,7 @@ impdata$steps[is.na(data$steps)]=mean(data$steps,na.rm=TRUE)
 
 ```r
 imptotal<-tapply(impdata$steps,impdata$date,sum,na.rm=TRUE)
-hist(imptotal,main="Total number of steps taken each day (imputed NA's)")
+hist(imptotal,main="Total number of steps taken each day (imputed NA's)",xlab="")
 ```
 
 ![plot of chunk unnamed-chunk-8](figure/unnamed-chunk-8-1.png) 
